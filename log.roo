@@ -1,0 +1,53 @@
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-22 08:02:56
+project --topLevelPackage com.springsource.roo.pizzashop
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity jpa --class ~.domain.Topping --testAutomatically 
+field string --fieldName name --notNull --sizeMin  2
+entity jpa --class ~.domain.Base --testAutomatically 
+field string --fieldName name --notNull --sizeMin  2
+entity jpa --class ~.domain.Pizza --testAutomatically 
+field string --fieldName name --notNull --sizeMin  2
+field number --fieldName price --type java.lang.Float
+field set --fieldName toppings --type ~.domain.Topping
+field reference --fieldName base --type ~.domain.Base
+entity jpa --class ~.domain.PizzaOrder --testAutomatically
+field string --fieldName name --notNull --sizeMin 2
+field string --fieldName address --sizeMax 30
+field number --fieldName total --type java.lang.Float 
+field date --fieldName deliveryDate --type java.util.Date
+field set --fieldName pizzas --type ~.domain.Pizza
+perform tests
+perform tests
+perform test
+perform tests
+web mvc setup
+web mvc all --package  ~.web
+security setup
+selenium test --controller ~.web.ToppingController
+selenium test --controller ~.web.BaseController
+selenium test --controller ~.web.PizzaController
+selenium test --controller ~.web.PizzaOrderController
+exit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-04-22 09:56:58
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-04-22 10:04:09
+backup
+backup
+perform package
+hint oauth
+hint security
+hint social
+hint view
+hint solr
+!
+entity jpa --class ~.Users --testAutomatically 
+field string username --notNull 
+field string password --notNull  
+field boolean enabled
+entity jpa --class ~.Users --testAutomatically 
+entity jpa --class ~.Authorities --testAutomatically 
+field string username --notNull 
+field string authority --notNull 
+entity jpa --class ~.Users --testAutomatically 
+field string username --notNull 
+field string password --notNull  
+field boolean enabled
