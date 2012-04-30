@@ -19,16 +19,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources" />
-        </sourceRoots>
-      </configuration>
-    </facet>
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="web: application context" profiles="" autodetected="true" />
-        <fileset id="MVC pizzashop servlet context" profiles="" autodetected="true" />
       </configuration>
     </facet>
   </component>
@@ -113,9 +103,13 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:3.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-taglibs:3.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-acl:3.1.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-openid:3.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.1.2" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject:guice:2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.openid4java:openid4java-nodeps:0.9.6" level="project" />
+    <orderEntry type="library" name="Maven: net.jcip:jcip-annotations:1.0" level="project" />
   </component>
 </module>
 
